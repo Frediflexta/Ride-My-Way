@@ -1,0 +1,88 @@
+/* Global rule */
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #F8F9FA;
+  font-family: 'Lora', serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background-color: #86CFDB;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 10px;
+  min-height: 60px;
+  border-bottom: #0000EE 3px solid;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+header #branding #brand {
+  color: #0000EE;
+}
+
+header li {
+  float: right;
+  margin-top: 25px;
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+header #branding h1 {
+  float: left;
+}
+
+header a:hover {
+  color: #0000EE;
+  font-weight: bold;
+}
+
+/* Showcase imgae */
+#showcase {
+  min-height: 350px;
+  background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat 0 -250px;
+  background-size: 100%;
+  text-align: center;
+  font-weight: 300px;
+}
+
+/* Boxes */
+#boxes {
+  margin-top: 30px;
+}
+.color {
+  color: #0000EE;
+}
+
+#boxes .box {
+  float: left;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  padding: 10px
+}
+
+/* footer */
+footer {
+  padding: 5px;
+  margin-top: 5px;
+  color: #ffffff;
+  background-color: #0000EE;
+  text-align: center;
+}
