@@ -17,6 +17,17 @@ ul {
   overflow: hidden;
 }
 
+/* Sticky header Reference: https://www.w3schools.com */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 90px;
+}
+
 /* Header */
 header {
   background-color: #86CFDB;
@@ -24,7 +35,7 @@ header {
   font-family: 'Ubuntu', sans-serif;
   padding-top: 10px;
   min-height: 60px;
-  border-bottom: #0000EE 3px solid;
+  border-bottom: #0000EE 1.5px solid;
 }
 
 header a {
