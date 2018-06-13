@@ -97,3 +97,48 @@ footer {
   background-color: #0000EE;
   text-align: center;
 }
+
+/* Rider login form */
+.details {
+  height: 20px;
+  width: 370px;
+  padding: 6px 10px;
+  line-height: 1.3333333;
+  border-radius: 2px;
+  margin-bottom: 10px
+}
+
+
+
+form  {
+  display: block;
+  margin-top: 0em;
+  text-align: center;
+}
+
+.signuptext {
+  padding: 5px 10px;
+}
+
+button{
+  width: 29%;
+  font-weight: bold;
+  background-color: white;
+  color: #0000EE;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-nature:hover {
+  background-color: rgb(84, 84, 219);
+  color: white;
+  font-weight: bold;
+}
+#signuptext a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #20ac76
+}
