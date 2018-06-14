@@ -59,7 +59,7 @@ header #branding h1 {
   float: left;
 }
 
-header a:hover {
+header li a:hover {
   color: #0000EE;
   font-weight: bold;
 }
@@ -104,7 +104,7 @@ footer {
   width: 370px;
   padding: 6px 10px;
   line-height: 1.3333333;
-  border-radius: 2px;
+  border-radius: 5px;
   margin-bottom: 10px
 }
 

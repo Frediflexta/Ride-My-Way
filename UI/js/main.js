@@ -9,4 +9,4 @@ const myFunction= ()=> {
   }
 }
 
-window.onscroll = () => {myFunction()};
+window.onscroll = () => myFunction();
