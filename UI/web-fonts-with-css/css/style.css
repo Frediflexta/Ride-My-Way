@@ -28,7 +28,7 @@ ul {
   padding-top: 90px;
 }
 
-/* Header */
+/***** Header *****/
 header {
   background-color: #86CFDB;
   color: #ffffff;
@@ -64,7 +64,7 @@ header li a:hover {
   font-weight: bold;
 }
 
-/* Showcase imgae */
+/********** Showcase imgae *********/
 #showcase {
   min-height: 350px;
   background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat 0 -250px;
@@ -73,7 +73,7 @@ header li a:hover {
   font-weight: 300px;
 }
 
-/* Boxes */
+/*********** Boxes ***********/
 #boxes {
   margin-top: 30px;
 }
@@ -89,7 +89,7 @@ header li a:hover {
   padding: 10px
 }
 
-/* footer */
+/******** footer ********/
 footer {
   padding: 5px;
   margin-top: 5px;
@@ -98,7 +98,7 @@ footer {
   text-align: center;
 }
 
-/* Rider login form */
+/******* Rider login/signup forms ********/
 .details {
   height: 20px;
   width: 370px;
@@ -107,8 +107,6 @@ footer {
   border-radius: 5px;
   margin-bottom: 10px
 }
-
-
 
 form  {
   display: block;
@@ -121,7 +119,7 @@ form  {
 }
 
 button{
-  width: 29%;
+  width: auto;
   font-weight: bold;
   background-color: white;
   color: #0000EE;
@@ -137,8 +135,61 @@ button{
   color: white;
   font-weight: bold;
 }
+
 #signuptext a {
   text-decoration: none;
   padding: 5px 10px;
   color: #20ac76
+}
+
+/********** homepage *********/
+#homepage {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+
+.ride-list {
+  grid-column: 1 / 2;
+}
+
+.ride {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  margin-left: 30px;
+  padding: 15px 0;
+  border-bottom: #ededed 2px solid
+}
+
+#pg-header {
+  text-align: center;
+  margin: 35px
+}
+
+.ride .desc p {
+  margin: 0px auto;
+}
+
+.ride .name {
+  font-weight: 600;
+}
+
+.ride .price {
+  font-weight: bold;
+}
+
+.ride .btn-nature i{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 78px;
+  max-height: 78px;
+  margin: 0 auto;
+}
+
+#confirmation{
+  grid-column: 2 / 3;
+  grid-row: 2;
 }
