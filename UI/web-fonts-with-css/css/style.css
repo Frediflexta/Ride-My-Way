@@ -17,17 +17,6 @@ ul {
   overflow: hidden;
 }
 
-/* Sticky header Reference: https://www.w3schools.com */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + main {
-  padding-top: 90px;
-}
-
 /***** Header *****/
 header {
   background-color: #86CFDB;
@@ -36,6 +25,17 @@ header {
   padding-top: 10px;
   min-height: 60px;
   border-bottom: #0000EE 1.5px solid;
+}
+
+/* Sticky header effect Reference: https://www.w3schools.com */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 90px;
 }
 
 header a {
@@ -73,7 +73,7 @@ header li a:hover {
   font-weight: 300px;
 }
 
-/*********** Boxes ***********/
+/*********** Boxes on landing page***********/
 #boxes {
   margin-top: 30px;
 }
@@ -89,7 +89,6 @@ header li a:hover {
   padding: 10px
 }
 
-/******** footer ********/
 footer {
   padding: 5px;
   margin-top: 5px;
@@ -98,7 +97,7 @@ footer {
   text-align: center;
 }
 
-/******* Rider login/signup forms ********/
+/******* login/signup forms ********/
 .details {
   height: 20px;
   width: 370px;
@@ -194,7 +193,7 @@ button{
   grid-row: 2;
 }
 
-/*********** Rider Trip History **************/
+/*********** Trip History **************/
 
 .history h2 {
   text-align: center;
@@ -239,4 +238,26 @@ button{
 
 .history-table-body-row p {
   text-align: center;
+}
+
+/**** Profile *****/
+.profile-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 10px;
+  padding: 30px;
+}
+
+.profile-page #image {
+  grid-column: 2 / 3;
+  padding: 30px;
+}
+
+.profile-page #profile-pix {
+  padding: 30px
+}
+
+.profile-page #edits {
+  grid-row: 2;
+  padding: 30px
 }
