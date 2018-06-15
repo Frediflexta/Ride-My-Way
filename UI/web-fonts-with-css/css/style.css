@@ -27,6 +27,11 @@ header {
   border-bottom: #0000EE 1.5px solid;
 }
 
+header .current a {
+  color: #0000EE;
+  font-weight: bold;
+}
+
 /* Sticky header effect Reference: https://www.w3schools.com */
 .sticky {
   position: fixed;
@@ -70,7 +75,6 @@ header li a:hover {
   background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat 0 -250px;
   background-size: 100%;
   text-align: center;
-  font-weight: 300px;
 }
 
 /*********** Boxes on landing page***********/
@@ -193,6 +197,15 @@ button{
   grid-row: 2;
 }
 
+#offer {
+  padding:0 0 30px 40px;
+  align-items: center;
+}
+
+.ride-list #time {
+  text-align: center;
+}
+
 /*********** Trip History **************/
 
 .history h2 {
@@ -260,4 +273,13 @@ button{
 .profile-page #edits {
   grid-row: 2;
   padding: 30px
+}
+
+/******** media queries ********/
+@media(max-width: 768px) {
+  header #branding nav li {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
 }
