@@ -193,3 +193,50 @@ button{
   grid-column: 2 / 3;
   grid-row: 2;
 }
+
+/*********** Rider Trip History **************/
+
+.history h2 {
+  text-align: center;
+}
+.date-details {
+  height: 20px;
+  width: 200px;
+  padding: 6px 10px;
+  line-height: 1.3333333;
+  border-radius: 5px;
+  margin-bottom: 10px
+}
+
+#history-content {
+  padding: 0px 20px 50px 20px;
+}
+
+.history-table-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0 0 0;
+  border-bottom:rgb(156, 150, 150) 2px solid;
+}
+
+.history-table-head p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.history-table-body-row:nth-child(odd) {
+  background-color: rgb(193, 233, 240);
+  border-radius: 2px;
+}
+
+.history-table-body-row {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0 10px 10px;
+  border-bottom:rgb(156, 150, 150) 2px solid;
+}
+
+.history-table-body-row p {
+  text-align: center;
+}
