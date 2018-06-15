@@ -216,7 +216,7 @@ button{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 10px 0 0 0;
-  border-bottom:rgb(156, 150, 150) 2px solid;
+  border-bottom:rgb(156, 150, 150) 1px solid;
 }
 
 .history-table-head p {
@@ -234,7 +234,7 @@ button{
   grid-gap: 5px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 10px 0 10px 10px;
-  border-bottom:rgb(156, 150, 150) 2px solid;
+  border-bottom:rgb(156, 150, 150) 1px solid;
 }
 
 .history-table-body-row p {
