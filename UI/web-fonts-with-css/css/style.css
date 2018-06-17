@@ -12,7 +12,7 @@ ul {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
 }
@@ -23,6 +23,7 @@ header {
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   padding-top: 10px;
+  width:100%;
   min-height: 60px;
   border-bottom: #0000EE 1.5px solid;
 }
@@ -62,6 +63,7 @@ header li {
 
 header #branding h1 {
   float: left;
+  padding-left: 10px;
 }
 
 header li a:hover {
@@ -76,7 +78,7 @@ header li a:hover {
   background-size: 100%;
 }
 
-/*********** Boxes on landing page***********/
+/*********** Boxes on landing/index page***********/
 #boxes {
   margin-top: 30px;
 }
@@ -103,11 +105,11 @@ footer {
 /******* login/signup forms ********/
 .details {
   height: 20px;
-  width: 370px;
+  width: 30%;
   padding: 6px 10px;
   line-height: 1.3333333;
   border-radius: 5px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 form  {
@@ -147,9 +149,8 @@ button{
 /********** homepage *********/
 #homepage {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: 209px;
   grid-gap: 10px;
+  grid-template-columns: 2fr 1fr;
 }
 
 .ride-list {
@@ -174,10 +175,6 @@ button{
   margin: 0px auto;
 }
 
-.ride .name {
-  font-weight: 600;
-}
-
 .ride .price {
   font-weight: bold;
 }
@@ -199,6 +196,10 @@ button{
 #offer {
   padding:0 0 30px 40px;
   align-items: center;
+}
+
+#offer label strong {
+  margin-bottom: 3em;
 }
 
 .ride-list #time {
@@ -255,6 +256,7 @@ button{
 /**** Profile *****/
 .profile-page {
   display: grid;
+  grid-gap: 5px;
   grid-template-columns: 2fr 1fr;
   margin: 10px;
   padding: 30px;
@@ -274,11 +276,84 @@ button{
   padding: 30px
 }
 
-/******** media queries ********/
+/********for mobiles***********/
 @media(max-width: 768px) {
-  header #branding nav li {
+  header #branding h1,
+  header nav,
+  header ul li{
     float: none;
     text-align: center;
     width: 100%;
+    padding-bottom: 10px;
+  }
+
+  header #branding h1 {
+    padding: 0;
+  }
+
+  #showcase {
+    background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat;
+    background-size: 100%;
+  }
+
+  #boxes .box{
+    float: none;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #boxes .box p {
+    text-align: center;
+    justify-content: center;
+    margin: 1em;
+  }
+
+  /* forms */
+  form .details{
+    width: 60%;
+  }
+
+  button {
+    width: auto;
+    background-color: #0000EE;
+    color: white;
+  }
+
+  /* offer ride on driver home page */
+  #offer input {
+    width: 60%;
+  }
+
+  #offer {
+    display: block;
+    margin-top: 0em;
+    text-align: center;
+  }
+
+  #homepage{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  #confirmation{
+    grid-column: 1 / 3;
+    margin-left: 30px;
+    padding: 15px 0;
+    border-bottom: #ededed 2px solid
+  }
+
+  .profile-page {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #profile-pix {
+    grid-row: 1 / 2;
+  }
+
+  .profile-details {
+    grid-row: 2 / 3;
   }
 }
