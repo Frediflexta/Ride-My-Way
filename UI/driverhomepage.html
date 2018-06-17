@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ride-My-Way | Request A Ride</title>
+  <link rel="stylesheet" href="./web-fonts-with-css/css/style.css">
+  <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:400,700" rel="stylesheet">
+</head>
+<body>
+  <header id="header">
+    <div class="container">
+      <div id="branding">
+        <a href="driverhomepage.html"><h1>Ride<span id="brand">My</span>Way</h1></a>
+      </div>
+      <nav>
+        <ul>
+          <div id="login-links">
+            <li><a href="index.html">Logout</a></li>
+            <li><a href="driverhistory.html">Trip History</a></li>
+            <li><a href="driverprofile.html">Profile</a></li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main>
+  <section id="showcase">
+    <!-- The image goes here -->
+  </section>
+  <div id="homepage">
+    <div id="pg-header">
+      <h1>Offer rides</h1>
+      <p><strong>NB:</strong>Please, ensure to only offer rides you're sure of completing! Charges will be incured on any ride you fail to complete.</p>
+    </div>
+    <div class="ride-list">
+      <div id="offer">
+        <label for=""><strong>Offer Ride(s)</strong></label>
+        <div>
+          <input class="details" type="text" name="from" required placeholder="Pick-up">
+        </div>
+        <div>
+          <input class="details" type="text" name="to" required placeholder="drop-off">
+        </div>
+        <div>
+          <input class="details" type="time" name="time" required placeholder="Time">
+        </div>
+        <a href="#"><button class="btn-nature">Provide Offer</button></a>
+      </div>
+    </div>
+    <div class="ride-list">
+      <div class="ride">
+        <div class="desc">
+          <p class="destination">Pick-up: Ikeja</p><div>Drop-off: Eko-Hotel, Victoria Island</div>
+        </div>
+        <div id="time">Time : 7:30am</div>
+        <div class="price">
+          N1200
+        </div>
+      </div>
+    </div>
+    <div class="ride-list">
+        <div class="ride">
+          <div class="desc">
+            <p class="destination">Pick-up: Ikeja</p><div>Drop-off: Eko-Hotel, Victoria Island</div>
+          </div>
+          <div id="time">Time : 7:30am</div>
+          <div class="price">
+            N1200
+          </div>
+        </div>
+      </div>
+    
+    <div id="confirmation">
+        <h4>Please Confirm This Ride</h4>
+        <details open>
+          <summary><strong>Trip Overview</strong></summary>
+            <p><i class="fas fa-user-circle fa-3x"></i></p>
+            <p>Rider: Jesse Ade</p>
+            <p>Pick-up: Yaba</p>
+            <p>Drop-off: Mile 12</p>
+            <p>Deperture Time: 7:30am</p>
+            <p>Price: N1,400</p>
+        </details>
+        <a href="#"><button class="btn-nature">Accept</button></a>
+        <a href="#"><button class="btn-nature">Reject</button></a>
+      </div>
+  </div>
+  <footer>
+    <p>Ride-My-Way Copyright&copy; 2018</p>
+  </footer>
+</main>
+<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+/* Global rule */
+html, body{
+  margin: 0;
+  padding: 0;
+  background-color: #F8F9FA;
+  font-family: 'Lora', serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/***** Header *****/
+header {
+  background-color: #86CFDB;
+  color: #ffffff;
+  font-family: 'Ubuntu', sans-serif;
+  padding-top: 10px;
+  width:100%;
+  min-height: 60px;
+  border-bottom: #0000EE 1.5px solid;
+}
+
+header .current a {
+  color: #0000EE;
+  font-weight: bold;
+}
+
+/* Sticky header effect Reference: https://www.w3schools.com */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 90px;
+}
+
+header a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+header #branding #brand {
+  color: #0000EE;
+}
+
+header li {
+  float: right;
+  margin-top: 25px;
+  display: inline;
+  padding: 0 10px 0 10px;
+}
+
+header #branding h1 {
+  float: left;
+  padding-left: 10px;
+}
+
+header li a:hover {
+  color: #0000EE;
+  font-weight: bold;
+}
+
+/********** Showcase imgae *********/
+#showcase {
+  min-height: 350px;
+  background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat 0 -250px;
+  background-size: 100%;
+}
+
+/*********** Boxes on landing/index page***********/
+#boxes {
+  margin-top: 30px;
+}
+.color {
+  color: #0000EE;
+}
+
+#boxes .box {
+  float: left;
+  justify-content: center;
+  text-align: center;
+  width: 30%;
+  padding: 10px
+}
+
+footer {
+  padding: 5px;
+  margin-top: 5px;
+  color: #ffffff;
+  background-color: #0000EE;
+  text-align: center;
+}
+
+/******* login/signup forms ********/
+.details {
+  height: 20px;
+  width: 30%;
+  padding: 6px 10px;
+  line-height: 1.3333333;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+form  {
+  display: block;
+  margin-top: 0em;
+  text-align: center;
+}
+
+.signuptext {
+  padding: 5px 10px;
+}
+
+button{
+  width: auto;
+  font-weight: bold;
+  background-color: white;
+  color: #0000EE;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-nature:hover {
+  background-color: rgb(84, 84, 219);
+  color: white;
+  font-weight: bold;
+}
+
+#signuptext a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: #20ac76
+}
+
+/********** homepage *********/
+#homepage {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 2fr 1fr;
+}
+
+.ride-list {
+  grid-column: 1 / 2;
+}
+
+.ride {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  margin-left: 30px;
+  padding: 15px 0;
+  border-bottom: #ededed 2px solid
+}
+
+#pg-header {
+  text-align: center;
+  margin: 35px
+}
+
+.ride .desc p {
+  margin: 0px auto;
+}
+
+.ride .price {
+  font-weight: bold;
+}
+
+.ride .btn-nature i{
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 78px;
+  max-height: 78px;
+  margin: 0 auto;
+}
+
+#confirmation{
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+
+#offer {
+  padding:0 0 30px 40px;
+  align-items: center;
+}
+
+#offer label strong {
+  margin-bottom: 3em;
+}
+
+.ride-list #time {
+  text-align: center;
+}
+
+/*********** Trip History **************/
+
+.history h2 {
+  text-align: center;
+}
+.date-details {
+  height: 20px;
+  width: 200px;
+  padding: 6px 10px;
+  line-height: 1.3333333;
+  border-radius: 5px;
+  margin-bottom: 10px
+}
+
+#history-content {
+  padding: 0px 20px 50px 20px;
+}
+
+.history-table-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0 0 0;
+  border-bottom:rgb(156, 150, 150) 1px solid;
+}
+
+.history-table-head p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.history-table-body-row:nth-child(odd) {
+  background-color: rgb(193, 233, 240);
+  border-radius: 2px;
+}
+
+.history-table-body-row {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 0 10px 10px;
+  border-bottom:rgb(156, 150, 150) 1px solid;
+}
+
+.history-table-body-row p {
+  text-align: center;
+}
+
+/**** Profile *****/
+.profile-page {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 2fr 1fr;
+  margin: 10px;
+  padding: 30px;
+}
+
+.profile-page #image {
+  grid-column: 2 / 3;
+  padding: 30px;
+}
+
+.profile-page #profile-pix {
+  padding: 30px
+}
+
+.profile-page #edits {
+  grid-row: 2;
+  padding: 30px
+}
+
+/********for mobiles***********/
+@media(max-width: 768px) {
+  header #branding h1,
+  header nav,
+  header ul li{
+    float: none;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  header #branding h1 {
+    padding: 0;
+  }
+
+  #showcase {
+    background: url(https://uberblogapi.10upcdn.com/wp-content/uploads/sites/213/2016/06/FB-image.png) no-repeat;
+    background-size: 100%;
+  }
+
+  #boxes .box{
+    float: none;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #boxes .box p {
+    text-align: center;
+    justify-content: center;
+    margin: 1em;
+  }
+
+  /* forms */
+  form .details{
+    width: 60%;
+  }
+
+  button {
+    width: auto;
+    background-color: #0000EE;
+    color: white;
+  }
+
+  /* offer ride on driver home page */
+  #offer input {
+    width: 60%;
+  }
+
+  #offer {
+    display: block;
+    margin-top: 0em;
+    text-align: center;
+  }
+
+  #homepage{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+  }
+
+  #confirmation{
+    grid-column: 1 / 3;
+    margin-left: 30px;
+    padding: 15px 0;
+    border-bottom: #ededed 2px solid
+  }
+
+  .profile-page {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #profile-pix {
+    grid-row: 1 / 2;
+  }
+
+  .profile-details {
+    grid-row: 2 / 3;
+  }
+}
