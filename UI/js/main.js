@@ -1,12 +1,12 @@
-const header = document.getElementById("header");
+const header = document.getElementById('header');
 const sticky = header.offsetTop;
 
-const myFunction= ()=> {
+const myFunction= () => {
   if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
+    header.classList.add('sticky');
   } else {
-    header.classList.remove("sticky");
+    header.classList.remove('sticky');
   }
-}
+};
 
 window.onscroll = () => myFunction();
