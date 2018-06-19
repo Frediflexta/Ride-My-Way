@@ -8,7 +8,7 @@ describe('Ride offers mock-models', () => {
     rideOffers.should.be.an('array');
   })
 
-  it('should contain ride details', () => {
+  it('should contain ride and driver details', () => {
     const ridesEx_ = [{
       id: 1,
       driver: {
