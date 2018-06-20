@@ -15,8 +15,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use('/', router);
 
-app.get('/', (req, res) => {
-  res.status(200).send('Welcome home, Ride-My-Way');
-});
-
 export default app;
