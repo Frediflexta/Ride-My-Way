@@ -11,16 +11,17 @@ class RidesController {
 
   static getARide(req, res) {
     const rideId = Number(req.params.rideId);
-    rides.find((ride, id) => {
-      if (rideId === (id + 1)) {
-        return res.status(200).send({
-          message: `Ride id ${rideId} was found`,
-          ride,
-        });
-      }
-      return res.status(404).send({
-        message: `Ride id ${rideId} does not exist`,
+
+    // find ride with params id
+    const rideFound = rides.find(ride => ride.id === rideId);
+    if (rideFound) {
+      return res.status(200).send({
+        message: `Ride id ${rideId} was found`,
+        rideFound,
       });
+    }
+    return res.status(404).send({
+      message: `Ride id ${rideId} does not exist`,
     });
   }
 }
