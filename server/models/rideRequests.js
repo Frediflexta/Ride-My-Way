@@ -1,3 +1,5 @@
+// This stores rides being requested, this is what the driver see
+
 const requestMade = [{
   id: 1,
   rider: {

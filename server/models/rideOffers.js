@@ -1,3 +1,5 @@
+// This stores all the rides being offered by drivers to riders
+
 const rides = [{
   id: 1,
   driver: {
