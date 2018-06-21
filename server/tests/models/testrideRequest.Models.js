@@ -9,7 +9,7 @@ describe('Request made to a driver to join his/her ride on an offer', () => {
   })
 
   it('should contain details of the rider making the request and the ride requested', () => {
-    const request_Ex = [{
+    const requestMade_Ex = [{
       id: 1,
       rider: {
         name: 'Jesse Ade',
@@ -23,6 +23,6 @@ describe('Request made to a driver to join his/her ride on an offer', () => {
       price: 1500,
     },
     ];
-    requestMade[0].should.be.deep.equal(request_Ex[0]);
+    requestMade[0].should.be.deep.equal(requestMade_Ex[0]);
   })
 })
