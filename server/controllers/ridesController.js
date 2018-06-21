@@ -10,17 +10,14 @@ class RidesController {
   }
 
   static getRide(req, res) {
-    const { rideId } = req.params;
-    rides.map((ride) => {
-      if (ride.id === rideId) {
+    const rideId = Number(req.params.rideId);
+    rides.find((ride, id) => {
+      if (rideId === (id + 1)) {
         return res.status(200).send({
-          message: `Ride id ${rideId} was found`,
           ride,
         });
       }
-      return res.status(404).send({
-        message: `Ride id ${rideId} does not exist`,
-      });
+      return res.status(404).send({ message: 'Not Found' });
     });
   }
 }

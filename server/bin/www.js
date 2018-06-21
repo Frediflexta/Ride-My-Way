@@ -4,6 +4,4 @@ import app from '../app';
 const port = Number(process.env.PORT) || 3000;
 
 // listen on provided port on all network interfaces
-app.listen(port, () => {
-  console.log(`Server is up and running at http://localhost:${port}`);
-});
+app.listen(port);
