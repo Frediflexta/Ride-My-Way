@@ -6,7 +6,7 @@ chai.use(chaiHttp);
 chai.should();
 
 describe('Route GET/api/v1/rides', () => {
-  it('should return a status 200', async () => {
+  it('should return a status 200 if OK', async () => {
     try {
       const res = await chai.request(app)
       .get('/api/v1/rides');
@@ -18,7 +18,7 @@ describe('Route GET/api/v1/rides', () => {
 });
 
  describe('Route GET/api/v1/rides/:rideId', () => {
-  it('should return a status 200', async () => {
+  it('should return a status 200 if OK', async () => {
     const res = await chai.request(app)
     .get('/api/v1/rides/:rideId');
     res.should.have.status(200);
