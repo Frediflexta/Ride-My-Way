@@ -35,7 +35,7 @@ class RidesController {
         requestedRide,
       });
       return res.status(201).send({
-        message: 'Ride request has been created',
+        message: `Ride request of id ${rideId}has been created`,
         request,
       });
     }
