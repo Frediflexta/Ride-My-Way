@@ -1,8 +1,8 @@
 // This stores the requests made by riders of a specific ride
+
 const request = [{
   requestedRide: {
     id: 1,
-    riderId: Math.floor(Math.random() * 100),
     driver: {
       name: 'Jesse Kalu',
       car: 'toyota camery',

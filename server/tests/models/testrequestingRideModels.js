@@ -13,9 +13,9 @@ describe('Ride requested', () => {
       requestedRide: {
         id: 1,
         driver: {
-            name: 'Jesse Kalu',
-            car: 'toyota camery',
-            plateNo: 'KTU5768IKJ',
+          name: 'Jesse Kalu',
+          car: 'toyota camery',
+          plateNo: 'KTU5768IKJ',
         },
         description: {
             destination: {
