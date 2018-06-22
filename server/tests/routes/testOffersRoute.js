@@ -71,7 +71,7 @@ describe('Route POST /rides/1/requests', () => {
       const res = await chai.request(app)
       .post('/api/v1/10/requests')
       .send({
-        id: 1,
+        id: 10,
         driver: {
           name: 'Jesse Kalu',
           car: 'toyota camery',
