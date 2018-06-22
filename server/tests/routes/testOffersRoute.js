@@ -11,7 +11,7 @@ describe('Route GET /api/v1/rides', () => {
       const res = await chai.request(app)
       .get('/api/v1/rides');
       res.should.have.status(200);
-    } catch (err) {
+    } catch(err) {
       throw err;
     }
   });
@@ -23,7 +23,7 @@ describe('Route GET /api/v1/rides', () => {
       const res = await chai.request(app)
       .get('/api/v1/rides/1');
       res.should.have.status(200);
-    } catch (err) {
+    } catch(err) {
       throw err;
     }
   });
@@ -33,7 +33,7 @@ describe('Route GET /api/v1/rides', () => {
       const res = await chai.request(app)
       .get('/api/v1/rides/10')
       res.should.have.status(404);
-    } catch (err) {
+    } catch(err) {
       throw err;
     }
   });
@@ -61,7 +61,7 @@ describe('Route POST /rides/1/requests', () => {
         price: 1500,
       });
       res.should.have.status(201);
-    } catch (err) {
+    } catch(err) {
       throw err;
     }
   });
@@ -86,7 +86,7 @@ describe('Route POST /rides/1/requests', () => {
         },
         price: 1500,
       })
-    } catch (err) {
+    } catch(err) {
       throw err;
     }
   })
