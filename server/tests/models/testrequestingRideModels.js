@@ -1,21 +1,21 @@
 import chai from 'chai';
-import request from '../../models/requestingRide';
+import requests from '../../models/requestingRide';
 
 chai.should();
 
 describe('Ride requested', () => {
   it('should be an array', () => {
-    request.should.be.an('array');
+    requests.should.be.an('array');
   })
 
   it('should contain details of the ride requested', () => {
-    const request_Ex = [{
+    const requests_Ex = [{
       requestedRide: {
         id: 1,
         driver: {
-            name: 'Jesse Kalu',
-            car: 'toyota camery',
-            plateNo: 'KTU5768IKJ',
+          name: 'Jesse Kalu',
+          car: 'toyota camery',
+          plateNo: 'KTU5768IKJ',
         },
         description: {
             destination: {
@@ -27,6 +27,6 @@ describe('Ride requested', () => {
         price: 1500,
       }
     }]
-    request[0].should.be.deep.equal(request_Ex[0]);
+    requests[0].should.be.deep.equal(requests_Ex[0]);
   })
 })

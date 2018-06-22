@@ -1,8 +1,8 @@
 // This stores the requests made by riders of a specific ride
-const request = [{
+
+const requests = [{
   requestedRide: {
     id: 1,
-    riderId: Math.floor(Math.random() * 100),
     driver: {
       name: 'Jesse Kalu',
       car: 'toyota camery',
@@ -19,4 +19,4 @@ const request = [{
   },
 }];
 
-export default request;
+export default requests;

@@ -1,4 +1,4 @@
-// This stores rides being requested, this is what the driver see
+// This stores rides being requested, this is what the driver sees
 
 const requestMade = [{
   id: 1,
