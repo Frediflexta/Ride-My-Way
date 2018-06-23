@@ -35,7 +35,7 @@ class OfferingRidesController {
     } = req.body;
 
     requestMade.push({
-      id: rides[rides.length - 1].id + 1,
+      id: requestMade[requestMade.length - 1].id + 1,
       rider,
       description,
       price,
@@ -43,7 +43,7 @@ class OfferingRidesController {
 
     const newRider = requestMade.find(Request => Request.rider.name === req.body.rider.name);
 
-    return res.status(201).send(newRider);
+    return res.status(202).send(newRider);
   }
 }
 

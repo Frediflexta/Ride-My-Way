@@ -16,26 +16,27 @@ const request = {
       plateNo: 'KTU5768IKJ',
     },
     description: {
+      destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
     price: 1500,
-  }
+  },
 }
 
 const badReq = {
   body: {
     driver: {
-      name: 'Jesse Kalu',
       car: 'toyota camery',
       plateNo: 'KTU5768IKJ',
     },
     description: {
+      destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
     price: 1500,
-  }
+  },
 }
-const req = mockReq(req);
+const req = mockReq(request);
 const res = mockRes();
 
 describe('create a new ride offer', () => {
@@ -52,9 +53,9 @@ describe('create a new ride offer', () => {
     createdRide.length.should.be.above(-1);
   });
 
-  it('should return error 400 if a field is missing', () => {
+  it('should return 400 if a field is missing', () => {
     const wrongReq = mockReq(badReq);
     OfferingRidesController.createRide(wrongReq, res);
-    res.status.should.have.been.calledWith(400);
+    res.status.should.have.been.calledWith(404);
   });
 });

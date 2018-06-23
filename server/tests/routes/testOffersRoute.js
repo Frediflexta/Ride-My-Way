@@ -86,6 +86,7 @@ describe('Route POST /rides/1/requests', () => {
         },
         price: 1500,
       })
+      res.should.have.status(404);
     } catch(err) {
       throw err;
     }
