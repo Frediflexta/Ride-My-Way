@@ -33,7 +33,7 @@ describe('accept requests made to join your ride', () => {
   });
 
   it('should return 201 on success', () => {
-    res.status.should.have.been.calledWith(201);
+    res.status.should.have.been.calledWith(202);
   });
 
   it('should create a new ride in requestMade', () => {
