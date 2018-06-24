@@ -1,12 +1,44 @@
 language: node_js
 node_js:
+  - "node"
   - "8.11.1"
 
-script:
-  - npm test 
+env:
+  global:
+    - NODE_ENV=test
+    - CXX=g++-5
+    - CC_TEST_REPORTER_ID=1ea5b6ed2442568c25444c1626fdaead02f6a28165ed90c6c6c3e1dea22a6702
 
-after_script: 
+cache:
+  directories:
+    - 'node_modules'
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-5
+
+before_install:
+  - npm install -g npm@latest
+  - npm install -g node-gyp node-pre-gyp
+
+install:
+  - npm install
+
+before_script:
+  - chmod 0777 ./node_modules/.bin/mocha
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - npm run test
+
+after_success:
   - npm run coverage
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
   email: false
