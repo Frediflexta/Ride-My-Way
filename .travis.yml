@@ -2,26 +2,15 @@ language: node_js
 node_js:
   - "stable"
 
-addons:
-  chrome: stable
-
 env:
-  - NODE_ENV=test
   - CC_TEST_REPORTER_ID=1ea5b6ed2442568c25444c1626fdaead02f6a28165ed90c6c6c3e1dea22a6702
 
 cache:
   directories:
     - "node_modules"
 
-before_script:
-  - chmod 0777 ./node_modules/.bin/mocha
-  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-  - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
-
 script:
   - npm test
 
 after_script:
   - npm run coverage
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
