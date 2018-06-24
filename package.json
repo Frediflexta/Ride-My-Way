@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon server/bin/www.js --exec babel-node",
     "test": "cross-env NODE_ENV=test nyc mocha --recursive server/tests",
-    "coverage": "NODE_ENV=test nyc report --reporter=text-lcov | coveralls",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "server:lint": "eslint \"server/**/*.js\" app.js --fix"
   },
   "repository": {
