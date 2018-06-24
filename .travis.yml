@@ -4,6 +4,7 @@ node_js:
   - "8.11.1"
 
 env:
+  - NODE_ENV=test
   - CC_TEST_REPORTER_ID=1ea5b6ed2442568c25444c1626fdaead02f6a28165ed90c6c6c3e1dea22a6702
 
 before_script:
@@ -17,3 +18,6 @@ script:
 
 after_script:
   - npm run coverage
+
+notifications:
+  email: false
