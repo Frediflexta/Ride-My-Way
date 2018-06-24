@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "node"
-  - "8.11.1"
+  - "stable"
 
 env:
   global:
@@ -14,6 +14,7 @@ cache:
     - 'node_modules'
 
 addons:
+  chrome: stable
   apt:
     sources:
     - ubuntu-toolchain-r-test
@@ -37,6 +38,7 @@ script:
   - npm run test
 
 after_success:
+  - coveralls
   - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
