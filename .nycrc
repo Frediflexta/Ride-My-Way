@@ -13,7 +13,8 @@
     "**/node_modules/**",
     "**/tests/**",
     "**/coverage/**",
-    "**/UI/**"
+    "**/UI/**",
+    "server/app.js"
   ],
   "include": [
     "**/server/**"
