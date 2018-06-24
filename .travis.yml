@@ -7,7 +7,7 @@ addons:
 
 env:
   - NODE_ENV=test
-  - CC_TEST_REPORTER_ID=3d1286d56974379a927f71a0a6f79c2fe409a9e9ca82810dffd4baaa325d1fed
+  - CC_TEST_REPORTER_ID=1ea5b6ed2442568c25444c1626fdaead02f6a28165ed90c6c6c3e1dea22a6702
 
 cache:
   directories:
@@ -22,6 +22,6 @@ before_script:
 script:
   - npm test
 
-after_success:
+after_script:
   - npm run coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
