@@ -1,0 +1,14 @@
+version: "2"
+plugins:
+  duplication:
+    enabled: false
+    config:
+      languages:
+        javascript:
+          mass_threshold: 20
+
+exclude_patterns:
+- "tests/"
+- "node_modules/"
+- "UI/"
+-
