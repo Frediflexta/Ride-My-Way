@@ -126,13 +126,50 @@ form  {
 button{
   width: 32%;
   font-weight: bold;
-  background-color: white;
-  color: #0000EE;
+  background-color: #1FBAD6;
+  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#confirmation .btn-accept{
+  width: 32%;
+  font-weight: bold;
+  background-color: rgb(11, 230, 139);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmation .btn-reject {
+  width: 32%;
+  font-weight: bold;
+  background-color: rgba(207, 52, 88, 0.952);
+  color: white;
+  opacity: inherit;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmation .btn-accept:hover {
+  background-color: #39AA56;
+  color: white;
+  font-weight: bold;
+}
+
+#confirmation .btn-reject:hover {
+  background-color: rgb(190, 19, 19);
+  color: white;
+  font-weight: bold;
 }
 
 .btn-nature:hover {
@@ -217,12 +254,16 @@ button{
   text-align: center;
 }
 .date-details {
-  height: 20px;
-  width: 200px;
+  height: 30px;
+  width: 60%;
   padding: 6px 10px;
   line-height: 1.3333333;
   border-radius: 5px;
   margin-bottom: 10px
+}
+
+.date-details button .btn-nature {
+  width: 20%;
 }
 
 #history-content {
