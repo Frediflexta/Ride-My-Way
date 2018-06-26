@@ -2,6 +2,9 @@
 Ride-My-Way App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers.
 https://www.pivotaltracker.com/n/projects/2177978
 
+#### Hosted
+https://freddie-ridemyway.herokuapp.com/
+
 ### About
 Ride-My-Way makes it easier to move around town, without having to worry about uncomfortable rides and expensive fuel cost. This app allow you view rides offered on your designated route, request to join the ride and Boom!! Done...
 
