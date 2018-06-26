@@ -119,6 +119,11 @@ form  {
   text-align: center;
 }
 
+.form-container i {
+  position: relative;
+  top: 5px;
+}
+
 .signuptext {
   padding: 5px 10px;
 }
@@ -170,6 +175,30 @@ button{
   background-color: rgb(190, 19, 19);
   color: white;
   font-weight: bold;
+}
+
+.form-container .btn-edit {
+  width: 32%;
+  font-weight: bold;
+  background-color: rgb(86, 86, 231);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container .btn-save {
+  width: 32%;
+  font-weight: bold;
+  background-color: #39AA56;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .btn-nature:hover {
