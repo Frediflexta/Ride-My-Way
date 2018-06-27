@@ -10,7 +10,7 @@ class OfferingRidesController {
     } = req.body;
 
     if (!driver || !description || !price) {
-      return res.status(400).send({
+      return res.status(404).send({
         message: 'Sorry! Something must be missing in your request',
       });
     }

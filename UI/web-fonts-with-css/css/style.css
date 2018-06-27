@@ -19,7 +19,7 @@ ul {
 
 /***** Header *****/
 header {
-  background-color: #86CFDB;
+  background-color: rgb(90, 195, 211);
   color: #ffffff;
   font-family: 'Ubuntu', sans-serif;
   padding-top: 10px;
@@ -100,6 +100,7 @@ footer {
   color: #ffffff;
   background-color: #0000EE;
   text-align: center;
+  position: relative;
 }
 
 /******* login/signup forms ********/
@@ -118,15 +119,81 @@ form  {
   text-align: center;
 }
 
+.form-container i {
+  position: relative;
+  top: 5px;
+}
+
 .signuptext {
   padding: 5px 10px;
 }
 
 button{
-  width: auto;
+  width: 32%;
   font-weight: bold;
-  background-color: white;
-  color: #0000EE;
+  background-color: #1FBAD6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmation .btn-accept{
+  width: 32%;
+  font-weight: bold;
+  background-color: rgb(11, 230, 139);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmation .btn-reject {
+  width: 32%;
+  font-weight: bold;
+  background-color: rgba(207, 52, 88, 0.952);
+  color: white;
+  opacity: inherit;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#confirmation .btn-accept:hover {
+  background-color: #39AA56;
+  color: white;
+  font-weight: bold;
+}
+
+#confirmation .btn-reject:hover {
+  background-color: rgb(190, 19, 19);
+  color: white;
+  font-weight: bold;
+}
+
+.form-container .btn-edit {
+  width: 32%;
+  font-weight: bold;
+  background-color: rgb(86, 86, 231);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container .btn-save {
+  width: 32%;
+  font-weight: bold;
+  background-color: #39AA56;
+  color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -164,6 +231,10 @@ button{
   margin-left: 30px;
   padding: 15px 0;
   border-bottom: #ededed 2px solid
+}
+
+.ride .btn-nature {
+  width: auto;
 }
 
 #pg-header {
@@ -212,12 +283,16 @@ button{
   text-align: center;
 }
 .date-details {
-  height: 20px;
-  width: 200px;
+  height: 30px;
+  width: 60%;
   padding: 6px 10px;
   line-height: 1.3333333;
   border-radius: 5px;
   margin-bottom: 10px
+}
+
+.date-details button .btn-nature {
+  width: 20%;
 }
 
 #history-content {

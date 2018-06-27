@@ -27,28 +27,30 @@
     </div>
   </header>
 <main>
-  <section id="showcase">
+  <!-- <section id="showcase">
     <!-- The image goes here -->
-  </section>
+  <!-- </section> -->
   <div id="homepage">
     <div id="pg-header">
       <h1>Offer rides</h1>
       <p><strong>NB:</strong>Please, ensure to only offer rides you're sure of completing! Charges will be incured on any ride you fail to complete.</p>
     </div>
     <div class="ride-list">
-      <div id="offer">
-        <label for=""><strong>Offer Ride(s)</strong></label>
-        <div>
-          <input class="details" type="text" name="from" required placeholder="Pick-up">
-        </div>
-        <div>
-          <input class="details" type="text" name="to" required placeholder="drop-off">
-        </div>
-        <div>
-          <input class="details" type="time" name="time" required placeholder="Time">
-        </div>
-        <a href="#"><button class="btn-nature">Provide Offer</button></a>
-      </div>
+      <form action="#">
+        <div id="offer">
+            <label for=""><strong>Offer Ride(s)</strong></label>
+            <div>
+              <input class="details" type="text" name="from" required placeholder="Pick-up">
+            </div>
+            <div>
+                <input class="details" type="text" name="to" required placeholder="drop-off">
+            </div>
+            <div>
+              <input class="details" type="time" name="time" required placeholder="Time">
+            </div>
+            <a href="#"><button class="btn-nature">Provide Offer</button></a>
+          </div>
+      </form>
     </div>
     <div class="ride-list">
       <div class="ride">
@@ -84,8 +86,8 @@
             <p>Deperture Time: 7:30am</p>
             <p>Price: N1,400</p>
         </details>
-        <a href="#"><button class="btn-nature">Accept</button></a>
-        <a href="#"><button class="btn-nature">Reject</button></a>
+        <button class="btn-accept">Accept</button>
+        <button class="btn-reject">Reject</button>
       </div>
   </div>
   <footer>
