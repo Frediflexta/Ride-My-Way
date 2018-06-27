@@ -5,11 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon server/bin/www.js --exec babel-node",
-<<<<<<< HEAD
-    "test": "nyc mocha --recursive server/tests",
-=======
     "test": "nyc mocha server/tests --recursive --require babel-core/register --require regenerator-runtime/runtime",
->>>>>>> 37cb534daed576c9a9c4ff96ba99d3544eb88765
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "server:lint": "eslint \"server/**/*.js\" app.js --fix"
   },
