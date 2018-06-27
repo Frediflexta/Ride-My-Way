@@ -17,11 +17,11 @@ describe('Route GET /api/v1/rides', () => {
   });
 });
 
- describe('Route GET /api/v1/rides/:rideId', () => {
+ describe('Route GET /api/v1/rides/1', () => {
   it('should return status 200 if OK', async () => {
     try {
       const res = await chai.request(app)
-      .get('/api/v1/rides/:rideId');
+      .get('/api/v1/rides/1');
       res.should.have.status(200);
     } catch (err) {
       throw err;

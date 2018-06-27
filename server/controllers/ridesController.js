@@ -1,5 +1,4 @@
 import rides from '../models/rideOffers';
-import request from '../models/requestingRide';
 
 class RidesController {
   // Get rides on offer
@@ -30,13 +29,11 @@ class RidesController {
     const rideId = Number(req.params.rideId);
 
     const requestedRide = rides.find(ride => ride.id === rideId);
+
     if (requestedRide) {
-      request.push({
-        requestedRide,
-      });
       return res.status(201).send({
-        message: 'Ride request has been created',
-        request,
+        message: `Ride request has been Sent to ${requestedRide.driver.name}`,
+        requestedRide,
       });
     }
     return res.status(400).send({
