@@ -11,6 +11,6 @@ router.post('/api/v1/rides/:rideId/requests', RidesController.requestARide);
 
 // driver route
 router.post('/api/v1/rides', OfferingRidesController.createRide);
-router.post('/api/v1/requestMade/accept', OfferingRidesController.acceptRide);
+router.post('/api/v1/requestMade/:rideId/accept', OfferingRidesController.acceptRide);
 
 export default router;

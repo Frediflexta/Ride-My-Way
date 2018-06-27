@@ -24,26 +24,32 @@ class OfferingRidesController {
 
     const newRide = rides.find(ride => ride.driver.name === req.body.driver.name);
 
-    return res.status(201).send(newRide);
+    return res.status(201).send({
+      newRide,
+      state: 'New ride created',
+    });
   }
 
   static acceptRide(req, res) {
-    const {
-      rider,
-      description,
-      price,
-    } = req.body;
+    const rideId = Number(req.params.rideId);
+    const acceptedRide = requestMade.find(accept => accept.id === rideId);
 
-    requestMade.push({
-      id: requestMade[requestMade.length - 1].id + 1,
-      rider,
-      description,
-      price,
+    if (acceptedRide) {
+      requestMade.push({
+        acceptedRide,
+      });
+
+      return res.status(202).send({
+        message: `You have accepted ride with id ${rideId}`,
+        state: 'Ride accepted',
+        acceptedRide,
+      });
+    }
+
+    return res.status(400).send({
+      message: `Request with id ${rideId} does not exist`,
+      state: 'Bad request',
     });
-
-    const newRider = requestMade.find(Request => Request.rider.name === req.body.rider.name);
-
-    return res.status(202).send(newRider);
   }
 }
 
