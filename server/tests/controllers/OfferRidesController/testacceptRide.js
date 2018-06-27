@@ -3,7 +3,7 @@ import sinonChai from 'sinon-chai';
 import { mockReq, mockRes } from 'sinon-express-mock';
 
 import OfferingRidesController from '../../../controllers/offerRidesController';
-import requestMade from '../../../models/rideRequests';
+import rides from '../../../models/rideOffers';
 
 chai.use(sinonChai);
 chai.should();
@@ -57,7 +57,7 @@ describe('accept requests of a specific id made to join your ride', () => {
   });
 
   it('should create(accept) a ride in requestMade', () => {
-    const accepted = requestMade.filter(accept => accept.rideId === 2);
+    const accepted = rides.filter(accept => accept.rideId === 2);
     accepted.length.should.be.above(-1);
   });
 });

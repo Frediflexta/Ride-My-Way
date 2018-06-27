@@ -2,7 +2,7 @@ import chai from 'chai';
 import sinonChai from 'sinon-chai';
 import { mockReq, mockRes } from 'sinon-express-mock';
 
-import requests from '../../../models/requestingRide';
+import rides from '../../../models/rideOffers';
 import RidesController from '../../../controllers/ridesController';
 
 chai.use(sinonChai);
@@ -64,7 +64,7 @@ describe('request a specific ride', () => {
   });
 
   it('should create a new request of a specified id', () => {
-    const requested = requests.filter(request => request.rideId === 1);
+    const requested = rides.filter(request => request.rideId === 1);
     requested.length.should.be.above(-1);
   });
 });

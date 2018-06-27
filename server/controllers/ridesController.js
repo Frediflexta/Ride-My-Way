@@ -1,8 +1,4 @@
 import rides from '../models/rideOffers';
-<<<<<<< HEAD
-=======
-import requests from '../models/requestingRide';
->>>>>>> develop
 
 class RidesController {
   // Get rides on offer
