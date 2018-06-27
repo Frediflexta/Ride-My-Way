@@ -1,5 +1,5 @@
 import rides from '../models/rideOffers';
-import requestMade from '../models/rideRequests';
+import requests from '../models/rideRequests';
 
 class OfferingRidesController {
   static createRide(req, res) {
@@ -32,10 +32,10 @@ class OfferingRidesController {
 
   static acceptRide(req, res) {
     const rideId = Number(req.params.rideId);
-    const acceptedRide = requestMade.find(accept => accept.id === rideId);
+    const acceptedRide = requests.find(accept => accept.id === rideId);
 
     if (acceptedRide) {
-      requestMade.push({
+      requests.push({
         acceptedRide,
       });
 
@@ -47,8 +47,24 @@ class OfferingRidesController {
     }
 
     return res.status(400).send({
-      message: `Request with id ${rideId} does not exist`,
-      state: 'Bad request',
+      message: `Request with id:${rideId} does not exist`,
+    });
+  }
+
+  static rejectRide(req, res) {
+    const reqId = Number(req.params.requestId);
+
+    const rejectReq = requests.find(request => request.id === reqId);
+
+    if (rejectReq) {
+      return res.status(202).send({
+        status: 'Rejected',
+        rejectReq,
+      });
+    }
+
+    return res.status(400).send({
+      message: 'Request does not exist',
     });
   }
 }

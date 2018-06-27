@@ -1,6 +1,6 @@
 // This stores rides being requested, this is what the driver sees
 
-const requestMade = [{
+const requests = [{
   id: 1,
   rider: {
     name: 'Jesse Ade',
@@ -41,5 +41,5 @@ const requestMade = [{
 },
 ];
 
-export default requestMade;
+export default requests;
 
