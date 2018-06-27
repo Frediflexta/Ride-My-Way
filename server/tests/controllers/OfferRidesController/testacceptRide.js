@@ -10,7 +10,6 @@ chai.should();
 
 const request = {
   body: {
-    id: 1,
     rider: {
       name: 'Jesse Ade',
       phoneNumber: 90912352876,
@@ -22,12 +21,33 @@ const request = {
     },
     price: 1500,
   },
+  params: {
+    rideId: 2
+  }
+}
+
+const badReq = {
+  body: {
+    rider: {
+      name: 'Jesse Ade',
+      phoneNumber: 90912352876,
+      image: 'https://imageicon.com/coed',
+    },
+    description: {
+      destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
+      time: '7:30am',
+    },
+    price: 1500,
+  },
+  params: {
+    rideId: 5
+  }
 }
 
 const req = mockReq(request);
 const res = mockRes();
 
-describe('accept requests made to join your ride', () => {
+describe('accept requests of a specific id made to join your ride', () => {
   beforeEach(() => {
     OfferingRidesController.acceptRide(req, res);
   });
@@ -36,9 +56,8 @@ describe('accept requests made to join your ride', () => {
     res.status.should.have.been.calledWith(202);
   });
 
-  it('should create a new ride in requestMade', () => {
-    const newRide = requestMade.filter(madeRiquest => madeRiquest.rider.name === 'Jesse Ade');
-
-    newRide.length.should.be.above(0);
+  it('should create(accept) a ride in requestMade', () => {
+    const accepted = requestMade.filter(accept => accept.rideId === 2);
+    accepted.length.should.be.above(-1);
   });
 });
