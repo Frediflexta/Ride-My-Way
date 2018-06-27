@@ -16,7 +16,7 @@ const rides = [{
 {
   id: 2,
   driver: {
-    name: 'Jesse Kalu',
+    name: 'Somto Amechi',
     car: 'toyota camery',
     plateNo: 'KTU5768IKJ',
   },
@@ -29,7 +29,7 @@ const rides = [{
 {
   id: 3,
   driver: {
-    name: 'Jesse Kalu',
+    name: 'Chinedu Smith',
     car: 'toyota camery',
     plateNo: 'KTU5768IKJ',
   },
