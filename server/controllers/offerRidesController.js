@@ -40,7 +40,7 @@ class OfferingRidesController {
       });
 
       return res.status(202).send({
-        message: `You have accepted ride with id ${rideId}`,
+        message: `You have accepted ride with ${acceptedRide.rider.name}`,
         state: 'Ride accepted',
         acceptedRide,
       });

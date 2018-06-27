@@ -16,7 +16,7 @@ const requestMade = [{
 {
   id: 2,
   rider: {
-    name: 'Jesse Ade',
+    name: 'Jules Barnes',
     phoneNumber: 90912352876,
     image: 'https://imageicon.com/coed',
   },
@@ -29,7 +29,7 @@ const requestMade = [{
 {
   id: 3,
   rider: {
-    name: 'Jesse Ade',
+    name: 'Stark Holmes',
     phoneNumber: 90912352876,
     image: 'https://imageicon.com/coed',
   },
