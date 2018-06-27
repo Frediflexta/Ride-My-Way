@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "stable"
+
+node:
+  - "stable"
+
+script:
+  - npm run test
+
+after_success:
+  - npm run coverage
+
+notifications:
+  email: false

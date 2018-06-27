@@ -1,4 +1,4 @@
-// This stores rides being requested, this is what the driver see
+// This stores rides being requested, this is what the driver sees
 
 const requestMade = [{
   id: 1,
@@ -27,7 +27,7 @@ const requestMade = [{
   price: 1500,
 },
 {
-  id: 2,
+  id: 3,
   rider: {
     name: 'Jesse Ade',
     phoneNumber: 90912352876,
