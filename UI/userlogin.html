@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ride-My-Way | Register</title>
+  <title>Ride-My-Way | Login</title>
   <link rel="stylesheet" href="./web-fonts-with-css/css/style.css">
   <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:400,700" rel="stylesheet">
@@ -17,10 +17,10 @@
       </div>
       <nav>
         <ul>
-          <div id="login-links">
+          <!-- <div id="login-links">
             <li><a href="riderlogin.html">Ride</a></li>
             <li><a href="driverlogin.html">Drive</a></li>
-          </div>
+          </div> -->
         </ul>
       </nav>
     </div>
@@ -30,32 +30,23 @@
     <!-- The image goes here -->
   </section>
   <main id="login">
-    <form class="loginForm" action="riderhomepage.html">
-        <h3 class="center">Create An Account</h3>
+    <form class="loginForm" action="user.html">
+        <h3 class="center">Welcome Back</h3>
         <div class="center">
-          <div>     
-            <input class="details" type="text" name="name" required placeholder="Name"> 
-          </div>
           <div>     
             <input class="details" type="email" name="username" required placeholder="Email"> 
           </div>
           <div>
-            <input class="details control" type="number" name="phonenumber" required placeholder="Phone Number" minlength="11">
-          </div>
-          <div>
             <input class="details control" type="password" name="password" required placeholder="Password" minlength="6">
           </div>
-          <div>
-            <input class="details control" type="password" name="password" required placeholder="Confirm" minlength="6">
-          </div>
-          <button class="btn-nature" type="submit">Submit</button>
+          <button class="btn-nature" type="submit"> Submit</button>
         </div>
         <hr>
 
         <p>OR</p>
 
         <div id="signuptext">
-          <p>Already have an acount? <a href="riderlogin.html">Login</a> </p>
+          <p>No Account? <a href="usersignup.html">Sign Up</a> </p>
           <a href="#">Forgot your password?</a>
         </div>
     </form>
