@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon server/bin/www.js --exec babel-node",
-    "test": "nyc --reporter=text mocha --exit server/tests/controllers/OfferRidesController/acceptRides.test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test": "mocha server/test/**/*.js --compilers js:babel-core/register",
+    "coverage": "nyc report --reporter=text-lcov",
     "server:lint": "eslint \"server/**/*.js\" app.js --fix"
   },
   "repository": {
