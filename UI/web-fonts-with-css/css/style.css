@@ -54,6 +54,7 @@ header #branding #brand {
   color: #0000EE;
 }
 
+
 header li {
   float: right;
   margin-top: 25px;
@@ -78,6 +79,11 @@ header li a:hover {
   background-size: 100%;
 }
 
+#user-decide {
+  text-align: center;
+  justify-content: center;
+}
+
 /*********** Boxes on landing/index page***********/
 #boxes {
   margin-top: 30px;
@@ -96,7 +102,7 @@ header li a:hover {
 
 footer {
   padding: 5px;
-  margin-top: 5px;
+  margin-top: 8%;
   color: #ffffff;
   background-color: #0000EE;
   text-align: center;
@@ -430,5 +436,14 @@ button{
 
   .profile-details {
     grid-row: 2 / 3;
+  }
+
+  footer {
+    padding: 5px;
+    margin-top: 40%;
+    color: #ffffff;
+    background-color: #0000EE;
+    text-align: center;
+    position: relative;
   }
 }
