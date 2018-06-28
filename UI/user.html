@@ -16,12 +16,12 @@
         <a href="index.html"><h1>Ride<span id="brand">My</span>Way</h1></a
       </div>
       <nav>
-        <ul>
+        <!-- <ul>
           <div id="login-links">
             <li><a href="riderlogin.html">Ride</a></li>
             <li><a href="driverlogin.html">Drive</a></li>
           </div>
-        </ul>
+        </ul> -->
       </nav>
     </div>
   </header>
@@ -30,24 +30,21 @@
     <!-- The image goes here -->
   </section>
   <main id="login">
-    <form class="loginForm" action="riderhomepage.html">
-      <h3 class="center">Login To Request A Ride</h3>
+    <form class="loginForm" action="driverhomepage.html">
+      <h3 class="center">Would You Like To</h3>
       <div class="center">
-        <div>     
-          <input class="details" type="email" name="username" required placeholder="Email"> 
-        </div>
         <div>
-          <input class="details control" type="password" name="password" required placeholder="Password" minlength="6">
+          <a href="#"><button class="btn-nature" type="submit">Drive</button></a>
         </div>
-        <button class="btn-nature" type="submit">Submit</button>
       </div>
-        <hr>
-        <p>OR</p>
+    </form>
 
-        <div id="signuptext">
-          <p>No Account? <a href="ridersignup.html">Sign Up</a></p>
-          <a href="#">Forgot your password?</a>
+    <form class="loginForm" action="riderhomepage.html">
+      <div class="center">
+        <div>
+          <a href="#"><button class="btn-nature" type="submit">Ride</button></a>
         </div>
+      </div>
     </form>
   </main>
   <footer>
