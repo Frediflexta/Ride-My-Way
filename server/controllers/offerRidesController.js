@@ -6,10 +6,9 @@ class OfferingRidesController {
     const {
       driver,
       description,
-      price,
     } = req.body;
 
-    if (!driver || !description || !price) {
+    if (!driver || !description) {
       return res.status(404).send({
         message: 'Sorry! Something must be missing in your request',
       });
@@ -19,7 +18,6 @@ class OfferingRidesController {
       id: rides[rides.length - 1].id + 1,
       driver,
       description,
-      price,
     });
 
     const newRide = rides.find(ride => ride.driver.name === req.body.driver.name);

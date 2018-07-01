@@ -11,7 +11,6 @@ const rides = [{
     destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
     time: '7:30am',
   },
-  price: 1500,
 },
 {
   id: 2,
@@ -24,7 +23,6 @@ const rides = [{
     destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
     time: '7:30am',
   },
-  price: 1500,
 },
 {
   id: 3,
@@ -37,7 +35,6 @@ const rides = [{
     destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
     time: '7:30am',
   },
-  price: 1500,
 }];
 
 export default rides;

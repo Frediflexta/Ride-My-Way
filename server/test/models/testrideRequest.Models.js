@@ -5,11 +5,11 @@ chai.should();
 
 describe('Request made to a driver to join his/her ride on an offer', () => {
   it('should an array', () => {
-    requestMade.should.be.an('array');
+    requests.should.be.an('array');
   })
 
   it('should contain details of the rider making the request and the ride requested', () => {
-    const requests_Ex = [{
+    const requestsEx = [{
       id: 1,
       rider: {
         name: 'Jesse Ade',
@@ -20,9 +20,8 @@ describe('Request made to a driver to join his/her ride on an offer', () => {
         destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
         time: '7:30am',
       },
-      price: 1500,
     },
     ];
-    requests[0].should.be.deep.equal(requests_Ex[0]);
+    requests[0].should.be.deep.equal(requestsEx[0]);
   })
 })

@@ -4,8 +4,9 @@
   "description": "Ride-My-Way App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers",
   "main": "app.js",
   "scripts": {
+    "db": "babel-node server/models/db/index.js",
     "start": "nodemon server/bin/www.js --exec babel-node",
-    "test": "nyc mocha server/tests --recursive --require babel-core/register --require regenerator-runtime/runtime",
+    "test": "mocha server/test/**/*.js --compilers js:babel-core/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "server:lint": "eslint \"server/**/*.js\" app.js --fix"
   },
@@ -20,19 +21,23 @@
   },
   "homepage": "https://github.com/Frediflexta/Ride-My-Way#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "express": "^4.16.3",
-    "morgan": "^1.9.0"
+    "jsend": "^1.0.2",
+    "jsonwebtoken": "^8.3.0",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.3"
   },
   "engines": {
     "node": "8.11.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
