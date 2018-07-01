@@ -1,6 +1,6 @@
 import pool from '../../../config/config';
 
-const text = `DROP TABLE IF EXISTS users;
+const text = `DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users(
   id SERIAL PRIMARY KEY NOT NULL,
   name TEXT NOT NULL,
