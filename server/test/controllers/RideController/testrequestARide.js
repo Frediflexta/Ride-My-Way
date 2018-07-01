@@ -22,7 +22,6 @@ const request = {
       },
       time: '7:30am',
     },
-    price: 1500,
   },
   params: {
     rideId: 1
@@ -43,7 +42,6 @@ const badRequest = {
       },
       time: '7:30am',
     },
-    price: 1500,
   },
   params: {
     rideId: 10

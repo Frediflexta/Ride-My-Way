@@ -19,7 +19,6 @@ const request = {
       destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
-    price: 1500,
   },
 }
 
@@ -33,7 +32,6 @@ const badReq = {
       destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
-    price: 1500,
   },
 }
 const req = mockReq(request);

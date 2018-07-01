@@ -9,7 +9,7 @@ describe('Ride offers mock-models', () => {
   })
 
   it('should contain ride and driver details', () => {
-    const ridesEx_ = [{
+    const ridesEx = [{
       id: 1,
       driver: {
         name: 'Jesse Kalu',
@@ -19,9 +19,8 @@ describe('Ride offers mock-models', () => {
       description: {
         destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
         time: '7:30am',
-      },
-      price: 1500,    
+      },    
     }]
-    rideOffers[0].should.deep.equal(ridesEx_[0]);
+    rideOffers[0].should.deep.equal(ridesEx[0]);
   })
 })

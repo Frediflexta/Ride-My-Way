@@ -20,7 +20,6 @@ const request = {
       destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
-    price: 1500,
   },
   params: {
     rideId: 1,
@@ -38,7 +37,6 @@ const badRequest = {
       destination: { from: 'ikeja', to: 'Eko-Hotels, Victoria Island' },
       time: '7:30am',
     },
-    price: 1500,
   },
   params: {
   rideId: 10,

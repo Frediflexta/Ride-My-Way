@@ -5,11 +5,11 @@ import app from '../../app';
 chai.use(chaiHttp);
 chai.should();
 
-describe('Route POST /api/v1/requestMade/2/accept', () => {
+describe('Route PUT /api/v1/rides/2/requests/2/accept', () => {
   it('should return status 202 when accepted', async () => {
     try {
       const res = await chai.request(app)
-      .post('/api/v1/requestMade/2/accept');
+      .put('/api/v1/rides/2/requests/2/accept');
       res.should.have.status(202);
     } catch(err) {
       throw err;
@@ -19,7 +19,7 @@ describe('Route POST /api/v1/requestMade/2/accept', () => {
   it('should return 400 if rideId is wrong', async () => {
     try {
       const res = await chai.request(app)
-      .post('/api/v1/requestMade/5/accept');
+      .put('/api/v1/rides/2/requests/2/accept');
       res.should.have.status(400);
     } catch(err) {
       throw err;

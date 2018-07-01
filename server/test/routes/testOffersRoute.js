@@ -58,7 +58,6 @@ describe('Route POST /rides/1/requests', () => {
           },
           time: '7:30am',
         },
-        price: 1500,
       });
       res.should.have.status(201);
     } catch(err) {
@@ -84,7 +83,6 @@ describe('Route POST /rides/1/requests', () => {
           },
           time: '7:30am',
         },
-        price: 1500,
       })
       res.should.have.status(404);
     } catch(err) {
