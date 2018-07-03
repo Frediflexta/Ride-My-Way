@@ -9,7 +9,7 @@ describe('Route GET /api/v1/rides', () => {
   it('should return status 200 if OK', async () => {
     try {
       const res = await chai.request(app)
-      .get('/api/v1/rides');
+        .get('/api/v1/rides');
       res.should.have.status(200);
     } catch(err) {
       throw err;
