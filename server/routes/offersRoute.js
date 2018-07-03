@@ -21,5 +21,6 @@ router.put('/api/v1/rides/:rideId/requests/:requestId/reject', OfferingRidesCont
 
 // users route
 router.post('/api/v1/auth/signup', UserController.userSignup);
+router.post('/api/v1/auth/login', UserController.userSignIn);
 
 export default router;
