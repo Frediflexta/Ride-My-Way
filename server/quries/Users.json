@@ -1,0 +1,4 @@
+{
+  "usersignup": "INSERT INTO users(fullname, email, phoneNumber, password) VALUES($1,$2,$3,$4)",
+  "userlogin": "SELECT * FROM users WHERE email = $1"
+}

@@ -1,6 +1,9 @@
 import { Pool } from 'pg';
+import dotenv from 'dotenv';
 
-const connection = 'postgres://postgres:postgres@localhost:5432/ride-my-way-db';
+dotenv.config();
+
+const connection = process.env.DB_CONNECTION;
 
 const pool = new Pool({
   connectionString: connection,
