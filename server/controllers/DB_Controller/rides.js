@@ -39,6 +39,19 @@ class RideControllers {
       }
     }
   }
+
+  static async getRides(req, res) {
+    try {
+      const resp = await pool.query(Rides.getRides);
+      return res.status(200).json({
+        status: true,
+        message: 'Retrived all rides',
+        resp: resp.rows,
+      });
+    } catch (err) {
+      throw err;
+    }
+  }
 }
 
 export default RideControllers;
