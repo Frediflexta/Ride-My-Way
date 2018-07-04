@@ -4,6 +4,7 @@ import Rides from '../../quries/Rides.json';
 class RideControllers {
   static async postRides(req, res) {
     try {
+      const { id: userId } = req.decoded;
       const {
         pickup,
         dropoff,
@@ -18,11 +19,12 @@ class RideControllers {
         });
       }
 
-      const resp = await pool.query(Rides.postRide, [pickup, dropoff, date, car]);
+      const resp = await pool.query(Rides.postRide, [userId, pickup, dropoff, date, car]);
       return res.status(201).json({
         success: true,
         message: 'Ride has been created',
         resp: {
+          userId,
           pickup,
           dropoff,
           date,
@@ -34,7 +36,7 @@ class RideControllers {
         return res.status(500).json({
           status: false,
           message: 'Internal server error',
-          error: err,
+          error: err.stack,
         });
       }
     }

@@ -1,8 +1,9 @@
 import express from 'express';
-import UserController from '../controllers/DB_Controller/users';
+import AuthVerification from '../Middleware/verifyToken';
 import RidesController from '../controllers/ridesController';
-import OfferingRidesController from '../controllers/offerRidesController';
+import UserController from '../controllers/DB_Controller/users';
 import RideControllers from '../controllers/DB_Controller/rides';
+import OfferingRidesController from '../controllers/offerRidesController';
 
 const router = express.Router();
 
@@ -25,7 +26,7 @@ router.post('/api/v1/auth/signup', UserController.userSignup);
 router.post('/api/v1/auth/login', UserController.userSignIn);
 
 // rides route
-router.post('/api/v1/users/rides', RideControllers.postRides);
-router.get('/api/v1/rides', RideControllers.getRides);
+router.post('/api/v1/users/rides', AuthVerification, RideControllers.postRides);
+router.get('/api/v1/rides', AuthVerification, RideControllers.getRides);
 
 export default router;
