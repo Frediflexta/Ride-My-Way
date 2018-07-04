@@ -51,7 +51,30 @@ class RideControllers {
         resp: resp.rows,
       });
     } catch (err) {
-      throw err;
+      throw err.stack;
+    }
+  }
+
+  static async getSingleRide(req, res) {
+    try {
+      const rideId = Number(req.params.rideId);
+      const resp = await pool.query(Rides.getaRide, [rideId]);
+
+      const foundRide = resp.rows.find(ride => ride.id === rideId);
+      if (!foundRide) {
+        return res.status(404).json({
+          status: false,
+          message: 'Ride does not exist',
+        });
+      }
+
+      return res.status(200).json({
+        status: true,
+        message: 'Ride successfully retrieved',
+        res: resp.rows[0],
+      });
+    } catch (err) {
+      throw err.stack;
     }
   }
 }

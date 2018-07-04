@@ -1,4 +1,5 @@
 {
   "postRide": "INSERT INTO rides(user_id,from_where,to_where,trip_date,car) VALUES($1,$2,$3,$4,$5)",
-  "getRides": "SELECT * FROM rides"
+  "getRides": "SELECT * FROM rides",
+  "getaRide": "SELECT * FROM rides WHERE id = $1"
 }
