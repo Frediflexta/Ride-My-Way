@@ -2,6 +2,7 @@ import express from 'express';
 import UserController from '../controllers/DB_Controller/users';
 import RidesController from '../controllers/ridesController';
 import OfferingRidesController from '../controllers/offerRidesController';
+import RideControllers from '../controllers/DB_Controller/rides';
 
 const router = express.Router();
 
@@ -22,5 +23,8 @@ router.put('/api/v1/rides/:rideId/requests/:requestId/reject', OfferingRidesCont
 // users route
 router.post('/api/v1/auth/signup', UserController.userSignup);
 router.post('/api/v1/auth/login', UserController.userSignIn);
+
+// rides route
+router.post('/api/v1/users/rides', RideControllers.postRides);
 
 export default router;

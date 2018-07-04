@@ -19,7 +19,7 @@ class UserController {
       } = req.body;
 
       // encrypt password
-      const hashedPwd = bcrypt.hashSync(password, 8);
+      const hashedPwd = bcrypt.hashSync(password, 10);
       if (!fullname || !email || !phoneNumber || !hashedPwd) {
         return res.status(400).json({
           status: false,
@@ -36,7 +36,7 @@ class UserController {
           fullname,
           email,
           phoneNumber,
-          password,
+          hashedPwd,
         },
         token,
       });
