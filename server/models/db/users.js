@@ -5,7 +5,7 @@ CREATE TABLE users(
   id SERIAL PRIMARY KEY NOT NULL,
   fullname TEXT NOT NULL,
   role USER_STATUS,
-  phoneNumber INT NOT NULL UNIQUE,
+  phoneNumber NUMERIC NOT NULL UNIQUE,
   email TEXT NOT NULL UNIQUE,
   password TEXT NOT NULL
 )`;
