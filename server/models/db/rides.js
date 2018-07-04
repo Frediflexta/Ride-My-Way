@@ -19,7 +19,7 @@ const ridesTable = () => {
       pool.end();
     });
   } catch (err) {
-    throw err;
+    throw err.message;
   }
 };
 

@@ -41,7 +41,7 @@ class UserController {
         token,
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 
@@ -82,7 +82,7 @@ class UserController {
         token,
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 }

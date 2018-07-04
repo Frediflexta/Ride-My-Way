@@ -6,8 +6,9 @@ CREATE TABLE requests(
   id SERIAL PRIMARY KEY NOT NULL,
   user_id INT references users(id) ON DELETE CASCADE,
   rides_id INT references rides(id) ON DELETE CASCADE,
-  accepted BOOLEAN NOT NULL,
-  rejected BOOLEAN NOT NULL
+  fullname TEXT NOT NULL,
+  accept BOOLEAN NOT NULL,
+  reject BOOLEAN NOT NULL
 )`;
 
 const requestsTable = () => {
@@ -16,7 +17,7 @@ const requestsTable = () => {
       console.log(err, res);
     });
   } catch (err) {
-    throw err;
+    throw err.message;
   }
 };
 

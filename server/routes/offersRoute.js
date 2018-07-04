@@ -4,6 +4,7 @@ import RidesController from '../controllers/ridesController';
 import UserController from '../controllers/DB_Controller/users';
 import RideControllers from '../controllers/DB_Controller/rides';
 import OfferingRidesController from '../controllers/offerRidesController';
+import RequestsControllers from '../controllers/DB_Controller/requests';
 
 const router = express.Router();
 
@@ -29,5 +30,8 @@ router.post('/api/v1/auth/login', UserController.userSignIn);
 router.post('/api/v1/users/rides', AuthVerification, RideControllers.postRides);
 router.get('/api/v1/rides', AuthVerification, RideControllers.getRides);
 router.get('/api/v1/rides/:rideId', AuthVerification, RideControllers.getSingleRide);
+
+// requests route
+router.post('/api/v1/rides/:rideId/requests', AuthVerification, RequestsControllers.requestRide);
 
 export default router;

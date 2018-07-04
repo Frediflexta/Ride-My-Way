@@ -15,7 +15,7 @@ class RideControllers {
       if (!pickup || !dropoff || !date || !car) {
         return res.status(400).json({
           success: false,
-          message: 'Ensure all fields are filled'
+          message: 'Ensure all fields are filled',
         });
       }
 
@@ -23,20 +23,14 @@ class RideControllers {
       return res.status(201).json({
         success: true,
         message: 'Ride has been created',
-        resp: {
-          userId,
-          pickup,
-          dropoff,
-          date,
-          car,
-        },
+        res: resp.rows[0],
       });
     } catch (err) {
       if (err) {
         return res.status(500).json({
           status: false,
           message: 'Internal server error',
-          error: err.stack,
+          error: err.message,
         });
       }
     }
@@ -51,7 +45,7 @@ class RideControllers {
         resp: resp.rows,
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 
@@ -74,7 +68,7 @@ class RideControllers {
         res: resp.rows[0],
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 }
