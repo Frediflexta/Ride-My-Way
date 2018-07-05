@@ -28,7 +28,6 @@ class UserController {
           message: 'Ensure you fill in all fields',
         });
       }
-
       const resp = await pool.query(Users.usersignup, [fullname, role, phonenumber, email, hashedPwd]);
       const user = resp.rows;
 

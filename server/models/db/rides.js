@@ -15,8 +15,8 @@ CREATE TABLE rides(
 
 const ridesTable = () => {
   try {
-    pool.query(text, (err, res) => {
-      console.log(err, res);
+    pool.query(text, (res) => {
+      console.log(res);
       pool.end();
     });
   } catch (err) {

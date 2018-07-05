@@ -12,8 +12,8 @@ CREATE TABLE users(
 
 const usersTable = () => {
   try {
-    pool.query(text, (err, res) => {
-      console.log(err, res);
+    pool.query(text, (res) => {
+      console.log(res);
     });
   } catch (err) {
     throw err.message;
