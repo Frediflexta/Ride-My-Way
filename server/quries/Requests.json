@@ -1,3 +1,4 @@
 {
-  "postrequest": "INSERT INTO requests(accept, reject, ride_id, user_id) VALUES ($1,$2,$3,$4)"
+  "postrequest": "INSERT INTO requests(accept, reject, ride_id, user_id) VALUES ($1,$2,$3,$4)",
+  "getallrequests": "SELECT * FROM requests WHERE id = $1"
 }
