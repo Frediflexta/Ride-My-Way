@@ -11,13 +11,7 @@ CREATE TABLE users(
 )`;
 
 const usersTable = () => {
-  try {
-    pool.query(text, (res) => {
-      console.log(res);
-    });
-  } catch (err) {
-    throw err.message;
-  }
+  return pool.query(text);
 };
 
 export default usersTable;
