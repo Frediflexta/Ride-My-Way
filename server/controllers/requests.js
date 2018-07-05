@@ -32,13 +32,10 @@ class RequestsControllers {
         //   userId,
         // },
       });
-
     } catch (err) {
       throw err.message;
     }
   }
-
-
 }
 
 export default RequestsControllers;
