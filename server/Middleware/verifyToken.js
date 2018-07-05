@@ -24,10 +24,10 @@ const AuthVerification = async (req, res, next) => {
       }
 
       req.decoded = decoded;
-      next();
+      return next();
     });
   } catch (err) {
-    throw err.stack;
+    throw err.message;
   }
 };
 

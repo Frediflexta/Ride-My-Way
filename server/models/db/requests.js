@@ -4,10 +4,10 @@ import pool from '../../../config/config';
 const text = `DROP TABLE IF EXISTS requests CASCADE;
 CREATE TABLE requests(
   id SERIAL PRIMARY KEY NOT NULL,
-  user_id INT references users(id) ON DELETE CASCADE,
-  rides_id INT references rides(id) ON DELETE CASCADE,
-  accepted BOOLEAN NOT NULL,
-  rejected BOOLEAN NOT NULL
+  accept BOOLEAN,
+  reject BOOLEAN,
+  ride_id INT references rides(id) ON DELETE CASCADE,
+  user_id INT references users(id) ON DELETE CASCADE
 )`;
 
 const requestsTable = () => {
@@ -16,7 +16,7 @@ const requestsTable = () => {
       console.log(err, res);
     });
   } catch (err) {
-    throw err;
+    throw err.message;
   }
 };
 

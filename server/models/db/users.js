@@ -16,7 +16,7 @@ const usersTable = () => {
       console.log(err, res);
     });
   } catch (err) {
-    throw err;
+    throw err.message;
   }
 };
 

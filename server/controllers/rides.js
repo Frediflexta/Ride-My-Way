@@ -1,30 +1,29 @@
-import pool from '../../../config/config';
-import Rides from '../../quries/Rides.json';
+import pool from '../../config/config';
+import Rides from '../quries/Rides.json';
 
 class RideControllers {
   static async postRides(req, res) {
     try {
-      const { id: userId } = req.decoded;
       const {
         pickup,
         dropoff,
         date,
         car,
       } = req.body;
+      const { id: userId } = req.decoded;
 
       if (!pickup || !dropoff || !date || !car) {
         return res.status(400).json({
           success: false,
-          message: 'Ensure all fields are filled'
+          message: 'Ensure all fields are filled',
         });
       }
 
-      const resp = await pool.query(Rides.postRide, [userId, pickup, dropoff, date, car]);
+      const resp = await pool.query(Rides.postRide, [pickup, dropoff, date, car, userId]);
       return res.status(201).json({
         success: true,
         message: 'Ride has been created',
-        resp: {
-          userId,
+        res: {
           pickup,
           dropoff,
           date,
@@ -35,8 +34,7 @@ class RideControllers {
       if (err) {
         return res.status(500).json({
           status: false,
-          message: 'Internal server error',
-          error: err.stack,
+          error: err.message,
         });
       }
     }
@@ -51,7 +49,7 @@ class RideControllers {
         resp: resp.rows,
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 
@@ -74,7 +72,7 @@ class RideControllers {
         res: resp.rows[0],
       });
     } catch (err) {
-      throw err.stack;
+      throw err.message;
     }
   }
 }
