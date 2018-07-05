@@ -13,7 +13,6 @@ class UserController {
     try {
       const {
         fullname,
-        role,
         phonenumber,
         email,
         password,
@@ -21,14 +20,14 @@ class UserController {
 
       // encrypt password
       const hashedPwd = bcrypt.hashSync(password, 10);
-      if (!fullname || !role || !phonenumber || !email || !hashedPwd) {
-        console.log(fullname, role, phonenumber, email, password);
+      if (!fullname || !phonenumber || !email || !hashedPwd) {
+        console.log(fullname, phonenumber, email, password);
         return res.status(400).json({
           status: false,
           message: 'Ensure you fill in all fields',
         });
       }
-      const resp = await pool.query(Users.usersignup, [fullname, role, phonenumber, email, hashedPwd]);
+      const resp = await pool.query(Users.usersignup, [fullname, phonenumber, email, hashedPwd]);
       const user = resp.rows;
 
       const token = jwt.sign({ id: user.id }, secret, { expiresIn: '3h' });
@@ -38,7 +37,6 @@ class UserController {
         message: 'User was successfully created',
         res: {
           fullname,
-          role,
           phonenumber,
           email,
           hashedPwd,
