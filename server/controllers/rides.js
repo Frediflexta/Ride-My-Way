@@ -1,5 +1,5 @@
-import pool from '../../../config/config';
-import Rides from '../../quries/Rides.json';
+import pool from '../../config/config';
+import Rides from '../quries/Rides.json';
 
 class RideControllers {
   static async postRides(req, res) {

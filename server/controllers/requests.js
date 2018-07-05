@@ -1,5 +1,5 @@
-import pool from '../../../config/config';
-import Requests from '../../quries/Requests.json';
+import pool from '../../config/config';
+import Requests from '../quries/Requests.json';
 
 
 class RequestsControllers {

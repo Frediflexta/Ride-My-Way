@@ -1,10 +1,10 @@
 import express from 'express';
 import AuthVerification from '../Middleware/verifyToken';
 import RidesController from '../controllers/ridesController';
-import UserController from '../controllers/DB_Controller/users';
-import RideControllers from '../controllers/DB_Controller/rides';
+import UserController from '../controllers/users';
+import RideControllers from '../controllers/rides';
 import OfferingRidesController from '../controllers/offerRidesController';
-import RequestsControllers from '../controllers/DB_Controller/requests';
+import RequestsControllers from '../controllers/requests';
 
 const router = express.Router();
 

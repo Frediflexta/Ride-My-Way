@@ -1,8 +1,8 @@
 import dotenv from 'dotenv';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import pool from '../../../config/config';
-import Users from '../../quries/Users.json';
+import pool from '../../config/config';
+import Users from '../quries/Users.json';
 
 dotenv.config();
 
