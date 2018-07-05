@@ -60,6 +60,29 @@ class RequestsControllers {
       throw err.message;
     }
   }
+
+  static async putReq(req, res) {
+    try {
+      const { id: userId } = req.decoded;
+      const { rideId } = Number(req.params.rideId);
+      const { accept, reject } = req.body;
+      const resp = await pool.query(Requests.putrequests, [accept, reject, rideId, userId]);
+      console.log(resp.rows)
+
+      if (resp.rows.accept === true) {
+        return res.status(202).json({
+          status: 'success',
+          message: 'You have accepted this request',
+        });
+      }
+      return res.status(202).json({
+        status: 'success',
+        message: 'You have rejected this request',
+      });
+    } catch (err) {
+      throw err.message;
+    }
+  }
 }
 
 export default RequestsControllers;

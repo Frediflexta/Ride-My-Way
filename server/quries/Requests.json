@@ -1,4 +1,5 @@
 {
   "postrequest": "INSERT INTO requests(accept, reject, ride_id, user_id) VALUES ($1,$2,$3,$4)",
-  "getallrequests": "SELECT * FROM requests WHERE id = $1"
+  "getallrequests": "SELECT * FROM requests WHERE id = $1",
+  "putrequests": "UPDATE requests SET accept = $1, reject = $2 WHERE id = $3 AND id = $4"
 }
