@@ -17,5 +17,6 @@ router.get('/api/v1/rides/:rideId', AuthVerification, RideControllers.getSingleR
 
 // requests route
 router.post('/api/v1/rides/:rideId/requests', AuthVerification, RequestsControllers.requestRide);
+router.get('/api/v1/users/rides/:rideId/requests', AuthVerification, RequestsControllers.getallRequests);
 
 export default router;
