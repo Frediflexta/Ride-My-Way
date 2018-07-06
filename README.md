@@ -17,11 +17,10 @@ Drivers are considered as our patners, and we recognise that not all car owner f
 
 ### Feature
 #### As a rider
-- View all rides on display
-- Request a specific ride you're interested in
-- Wait for confirmation
-
-#### As a driver
-- Offer rides
-- View requests coming in
-- Decide to accept or reject
+- SIgnUp: https://freddie-ridemyway.herokuapp.com/api/v1/auth/signup
+- Login: https://freddie-ridemyway.herokuapp.com//api/v1/auth/login
+- View all rides on display: https://freddie-ridemyway.herokuapp.com/
+- Request a specific ride you're interested in: https://freddie-ridemyway.herokuapp.com/api/v1/rides/:rideId/requests
+- View a specific ride: https://freddie-ridemyway.herokuapp.com/api/v1/rides/:rideId
+- Offer rides: https://freddie-ridemyway.herokuapp.com/api/v1/rides
+- View requests coming in: https://freddie-ridemyway.herokuapp.com/api/v1/users/rides/:rideId/requests
