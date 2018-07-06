@@ -19,7 +19,7 @@ Drivers are considered as our patners, and we recognise that not all car owner f
 #### As a rider
 - SIgnUp: https://freddie-ridemyway.herokuapp.com/api/v1/auth/signup
 - Login: https://freddie-ridemyway.herokuapp.com//api/v1/auth/login
-- View all rides on display: https://freddie-ridemyway.herokuapp.com/
+- View all rides on display: https://freddie-ridemyway.herokuapp.com/api/v1/rides
 - Request a specific ride you're interested in: https://freddie-ridemyway.herokuapp.com/api/v1/rides/:rideId/requests
 - View a specific ride: https://freddie-ridemyway.herokuapp.com/api/v1/rides/:rideId
 - Offer rides: https://freddie-ridemyway.herokuapp.com/api/v1/rides

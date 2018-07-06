@@ -11,7 +11,7 @@ const AuthVerification = async (req, res, next) => {
     if (!token) {
       return res.status(403).json({
         success: false,
-        message: 'No token provided',
+        message: 'You need to be signed in',
       });
     }
 

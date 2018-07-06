@@ -12,7 +12,7 @@ router.post('/api/v1/auth/login', UserController.userSignIn);
 
 // rides route
 router.post('/api/v1/users/rides', AuthVerification, RideControllers.postRides);
-router.get('/api/v1/rides', AuthVerification, RideControllers.getRides);
+router.get('/api/v1/rides', RideControllers.getRides);
 router.get('/api/v1/rides/:rideId', AuthVerification, RideControllers.getSingleRide);
 
 // requests route
